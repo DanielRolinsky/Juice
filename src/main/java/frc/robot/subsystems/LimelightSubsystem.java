@@ -9,6 +9,7 @@ public class LimelightSubsystem extends SubsystemBase {
     private final NetworkTable limelight = NetworkTableInstance.getDefault().getTable("limelight");
     private final NetworkTableEntry tx = limelight.getEntry("tx");
     private final NetworkTableEntry ty = limelight.getEntry("ty");
+    private final NetworkTableEntry ta = limelight.getEntry("ta");
 
     public LimelightSubsystem() {}
 
@@ -18,6 +19,10 @@ public class LimelightSubsystem extends SubsystemBase {
 
     public double getY() {
         return ty.getDouble(0.);
+    }
+
+    public double getA() {
+        return ta.getDouble(0.);
     }
 }
 
