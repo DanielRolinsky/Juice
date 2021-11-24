@@ -12,7 +12,7 @@ public class FollowLimelightCommand extends CommandBase {
         this.driveSubsystem = driveSubsystem;
         this.limelightSubsystem = limelightSubsystem;
 
-        addRequirements(this.driveSubsystem, this.limelightSubsystem);
+        addRequirements(driveSubsystem, limelightSubsystem);
     }
 
     @Override

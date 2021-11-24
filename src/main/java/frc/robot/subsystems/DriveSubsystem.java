@@ -17,7 +17,11 @@ public class DriveSubsystem extends SubsystemBase {
 
     private final DifferentialDrive drive = new DifferentialDrive(right, left);
 
-    public DriveSubsystem() {}
+    public DriveSubsystem() {
+        // We fitted this robot backwards :(
+        left.setInverted(true);
+        right.setInverted(true);
+    }
 
     public void arcadeDrive(double speed, double rotation) {
         drive.arcadeDrive(speed, rotation);
