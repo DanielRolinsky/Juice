@@ -1,4 +1,4 @@
-package frc.robot.commands;
+package frc.robot.commands.autonomous;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveSubsystem;
@@ -50,11 +50,10 @@ public class FollowLimelightCommand extends CommandBase {
             driveSubsystem.arcadeDrive(0, 0);
         } else {
             // If the object is farther than half
-            driveSubsystem.arcadeDrive(speed, x / 40);
+            driveSubsystem.arcadeDrive(speed, -(x / 40));
         }
     }
 
-    // Returns true when the command should end.
     @Override
     public boolean isFinished() {
         return false;
