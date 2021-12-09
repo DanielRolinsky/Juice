@@ -32,7 +32,7 @@ public class RobotContainer {
     new JoystickButton(masterController, 1).whenPressed(new FollowLimelightCommand(driveSubsystem, limelightSubsystem));
 
     driveSubsystem.setDefaultCommand(new RunCommand(() -> driveSubsystem
-            .arcadeDrive(masterController.getY(GenericHID.Hand.kLeft), masterController.getX(GenericHID.Hand.kLeft)), driveSubsystem));
+            .arcadeDrive(-masterController.getY(GenericHID.Hand.kLeft), -masterController.getX(GenericHID.Hand.kLeft)), driveSubsystem));
   }
 
   public Command getAutonomousCommand() {
